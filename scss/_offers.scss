@@ -1,0 +1,136 @@
+#offers{
+  @extend  #contact-us;
+
+
+  .price-offers{
+    background-color: #F9F5F2;
+
+    img{
+      width: 100%;
+    }
+    .content{
+      padding: 1.5rem;
+      p{
+        font-size: 18px;
+      }
+      .price{
+        text-align: left;
+        margin: 2rem 0;
+        h4{
+          color: $primary-color;
+          font-size: 50px;
+          font-weight: bold;
+          span{
+            color: $secondary-color;
+            font-size: 20px;
+            font-weight: normal;
+          }
+        }
+      }
+      h3{
+        font-size: 35px;
+      }
+      .button{
+        text-align: center;
+        a{
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+
+  .offers-info{
+    background-color: #F9F5F2;
+    padding: 2rem 0 5rem ;
+
+    .info-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      text-align: center;
+      max-width: 400px;
+  
+      .left, 
+      .right{
+        font-size: 20px;
+        width: 50%;
+        padding: 1rem;
+        border-bottom: 4px solid $primary-color;
+
+        p{
+          border-bottom: 2px solid white;
+          padding-bottom: 1rem;
+        }
+        p:last-child{
+          border: none;
+        }
+      }
+      .left{
+        background-color: $primary-color;
+        color: white;
+      }
+      .right{
+        background-color: #F5F5F5 ;
+        color: $primary-color;
+        font-weight: bold;
+        box-shadow:  0px 3px 10px lightgrey;
+      }
+
+      @media screen and (max-width: 450px) {
+        .left, 
+      .right{
+        font-size: 17px;
+        padding: .6rem;
+         }
+      }
+    }
+  }
+  // start style info in all offers // 
+  .all-info{
+    background-color:#151E29 ;
+    color: white;
+    padding: 3rem 0;
+
+    .images-container{
+      display: flex;
+      .img-content{
+        .content,
+        img{
+          width: 200px;
+          height: 150px;
+          background-color: $primary-color;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+         span{
+          margin: 0 .2rem;
+          font-size: 14px;
+         }
+        }
+      }
+
+      @media screen and (max-width: 450px) {
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center !important;
+        .img-content{
+          margin: 1rem 0;
+        }
+      }
+
+      .img-content:first-of-type{
+            p{
+              span{
+                border: 2px solid;
+                border-radius: 50%;
+                padding: 3px 8px;
+              }
+            }
+      }
+
+    }
+  }
+}

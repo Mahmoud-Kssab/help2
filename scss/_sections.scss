@@ -1,0 +1,138 @@
+#sections{
+  @extend  #contact-us;
+
+
+  .icons-container{
+      .icon-container{
+        padding: 1rem 0;
+        border: 2px solid lightgray;
+        margin: 1rem 0;
+        @include easeInOut ;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 0;
+            background-color: $primary-color;
+            top: 0;
+            right: 0;
+            @include easeInOut ;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: $primary-color;
+            bottom: 0;
+            left: 0;
+           @include easeInOut ;
+        }
+        &:hover {
+           border: none;
+           border-top: 2px solid $primary-color;
+           border-left: 2px solid $primary-color;
+           box-shadow: inset -1px 0px 20px 12px $primary-color;
+           transform: scale(1.07) translateY(-10px);
+           &::after {
+            height: 100%;
+           }
+           &::before {
+            width: 100%;
+           }
+
+        }
+
+        img{
+            width: 100px;
+            height: 150px;
+        }
+        p{
+            font-size: 22px;
+        }
+      }
+
+      .btn-link{
+          margin: 1rem auto;
+          display: flex;
+          color: $primary-color;
+          align-items: center;
+          justify-content: center;
+          width: 95px;
+      
+      }
+
+  }
+
+  .slider-container{
+      background-color: #18212E;
+      padding: 2rem 0;
+      h3{
+          color: white
+      }
+  }
+  .my-card{
+      @include easeInOut;
+    .over-lay{
+        transform:  translateY(100%);
+    }
+    &:hover{
+        transform: translateY(-15px);
+        .over-lay{
+            transform:  translate(0) ;
+         }
+    } 
+}
+
+.last-one{
+    .sections-card{
+        height:500px;
+        box-shadow:  0 0 8px lightslategrey;
+        position: relative;
+        margin: 1rem 0;
+        border-radius: 10px;
+        @include easeInOut;
+        img{
+            width: 100%;
+           height: 60%;
+           border-top-left-radius: 10;
+           border-top-right-radius: 10;
+
+        }
+        span{
+            position: absolute;
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            left: 20px;
+            top: 53%;
+            img{
+                width: 20px;
+            }
+        }
+        .content{
+            padding: 1rem 1.5rem;
+            a{
+                float: left;
+                margin: .7rem 0;
+            }
+            h4{
+                font-size: 24px;
+                font-weight: bold;
+            }
+            h6{
+                color: darken($secondary-color, 20);
+                font-size: 22px;
+            }
+        }
+        &:hover{
+           transform: translateY(-10px);
+           border-bottom: 4px solid $primary-color;
+
+        }
+    }
+}
+}

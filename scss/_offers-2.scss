@@ -1,0 +1,154 @@
+#offers-2{
+    @extend #offers;
+
+
+    .offers-box{
+        border: 1px solid $secondary-color ;
+        width: 300px;
+        text-align: center;
+        padding: 1rem 0;
+        margin: 2rem 1rem;
+        font-size: 22px;
+        font-weight: bold;
+        @include easeInOut;
+        &:hover{
+            color: white;
+            background-color: $primary-color;
+        }
+    }
+
+    p{
+        color: darken($secondary-color, 20);
+    }
+
+    .second-section{
+        img{
+            width: 100%;
+        }
+        .second-section-content{
+            p{
+                align-items: center;
+                display: flex;
+            }
+            i{
+                font-size: 30px;
+                color: $primary-color;
+                margin: 0 .5rem;
+            }
+        }
+    }
+
+    .offers2-all-info{
+        margin: 3rem 0;
+        .right{
+            background-color: #F6F5F5;
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+            z-index: 2;
+            h1{
+                font-size: 25px;
+                font-weight: bold;
+            }
+            h3{
+                font-size: 30px;
+                font-weight: normal;
+            }
+            p{
+                font-size: 18px;
+                padding: 2rem 0;
+            }
+            &::before,
+            &:after{
+                position: absolute;
+                content: '';
+                background-color: transparent;
+                border-radius: 50%;
+            }
+            &::before{
+                width: 250px;
+                height: 250px;
+                border: 30px solid $primary-color;
+                opacity: 0.1;
+                top: 5px;
+                left: 5px;
+            }
+            &::after{
+                width: 120px;
+                height: 120px;
+                border: 20px solid $primary-color;
+                opacity: 0.4;
+                bottom: 10px;
+                left: 0;
+            }
+        }
+        .left{
+            height: 100%;
+            .top{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                height: 50%;
+                padding-bottom: 1rem;
+                img{
+                    width: 49%;
+                }
+
+            }
+            .bottom{
+                height: 50%;
+                background-color: $primary-color;
+                display: flex;
+                position: relative;
+                .content{
+                    color: white;
+                    text-align: center;
+                    padding: 0 2rem;
+                    display: flex;
+                    align-items: center;
+                    h4{
+                        font-weight: bold;
+                    }
+                }
+                &::before,
+                &:after{
+                    position: absolute;
+                    content: '';
+                    background-color: transparent;
+                    border-radius: 50%;
+                }
+                &::before{
+                    width: 180px;
+                    height: 180px;
+                    border: 30px solid white;
+                    opacity: 0.1;
+                    top: 5px;
+                    left: 5px;
+                }
+                &::after{
+                    width: 120px;
+                    height: 120px;
+                    border: 20px solid white;
+                    opacity: 0.4;
+                    bottom: -3px;
+                    right: 0;
+                }
+                .circle{
+                    position: absolute;
+                    background-color: white;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    left: 6px;
+                    bottom: -60px;
+                }
+                @media screen and (max-width: 450px){
+                    .circle{
+                        width: 90px;
+                        height: 90px;
+                    }
+                }
+            }
+        }
+    }
+}

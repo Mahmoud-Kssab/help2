@@ -1,0 +1,77 @@
+$primary-color: #17B8BC;
+
+$secondary-color: #C4C4C4;
+@mixin easeInOut {
+  transition: all .7s ease-in-out;
+}
+
+@font-face {
+  font-family: dinNext;
+  src: url('../fonts/ArbFONTS-DINNextLTArabic-Regular-3.ttf');
+}
+
+@font-face {
+  font-family: segoe-ui;
+  src: url('../fonts/Segoe\ UI.woff');
+}
+h1, h2, h3, h4, h5, h6{
+  font-family:dinNext ;
+}
+body{
+  font-family: segoe-ui;
+  text-align: right;
+}
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.app-btn{
+  border: none;
+  padding: 9px 45px;
+  font-size: 22px;
+  border-radius: 25px;
+  @include easeInOut;
+  cursor: pointer;
+
+}
+.dark{
+  background-color: $primary-color;
+  color: white;
+  &:hover{
+    text-decoration: none;
+    color: $primary-color;
+    background-color: white;
+    border: 2px solid $primary-color;
+  }
+}
+
+.light{
+  background-color:white ;
+  color:  $primary-color;
+  border: 2px solid $primary-color;
+  &:hover{
+    text-decoration: none;
+    color: white;
+    background-color:  $primary-color;
+  }
+}
+
+.btn-link{
+  color: $primary-color;
+  border-bottom:2px solid $primary-color ;
+  font-size: 20px;
+
+  @include easeInOut;
+  &:hover{
+      border: 2px solid $primary-color;
+      color: $primary-color;
+      padding: .2rem .5rem;
+      border-radius: 30px;
+      text-decoration: none;
+  }
+}
+
